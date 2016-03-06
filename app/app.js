@@ -15,7 +15,7 @@ angular.module('modalTest',['ngMaterial', 'ngMessages', 'material.svgAssetsCache
       var countDays2 = Math.floor(this.myDate / 1000 / 60 / 60 / 24 / 365.25);
       var da = countDays - countDays2;
       if (da > 2) {
-        alert('Enough!');
+        alert('Another word!');
       }
     }
   });
