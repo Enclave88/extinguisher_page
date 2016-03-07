@@ -9,6 +9,7 @@ html, body {
 h1 {
   text-transform: uppercase;
   font-size: 4rem;
+  color: dimgrey;
 }
 
 /*page*/
@@ -20,19 +21,21 @@ h1 {
 }
 
 .alldate {
-  background-color: lightskyblue;
+  /*background-color: lightskyblue;*/
 }
 
 .subtitle {
   font-size: 1.6rem;
   text-transform: uppercase;
-  color: #000;
+  color: dimgrey;
   font-weight: bold;
 }
 
 .subtitle span {
   font-size: 3rem;
   color: dimgrey;
+  box-shadow: inset 0 8px 6px -5px #aaa;
+  padding: 0 .4rem;
 }
 
 /* app css stylesheet */
@@ -77,3 +80,5 @@ h1 {
   font-size: 11px;
   color: darkred;
   margin: 10px 0 0 25px; }
+
+/*dropdown*/
