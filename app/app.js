@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('modalTest',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
+angular.module('modalTest', ['ngRoute', 'ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
   .controller('dialogTestCtrl',function($scope, $interval){
 
     $interval(function () {
@@ -9,13 +9,18 @@ angular.module('modalTest',['ngMaterial', 'ngMessages', 'material.svgAssetsCache
 
     $scope.myDate = new Date();
 
+
     $scope.chooseYourDestiny = function () {
       debugger;
-      var countDays = Math.floor(new Date() / 1000 / 60 / 60 / 24 / 365.25);
-      var countDays2 = Math.floor(this.myDate / 1000 / 60 / 60 / 24 / 365.25);
-      var da = countDays - countDays2;
-      if (da > 2) {
-        alert('Another word!');
+      var dayZero = Math.round(new Date() / 1000 / 60 / 60 / 24 / 365.25);
+      var beginCount = Math.round(this.myDate / 1000 / 60 / 60 / 24 / 365.25);
+      var summary = (dayZero - beginCount);
+      if (summary >= 2) {
+        alert('Пора перезаряжать!');
+      } else if (summary >= 1) {
+          alert('Время освидетельствования');
+      } else if (summary < 1) {
+          alert('Всё в порядке');
       }
     }
   });
