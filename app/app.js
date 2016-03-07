@@ -9,7 +9,6 @@ angular.module('modalTest', ['ngRoute', 'ngMaterial', 'ngMessages', 'material.sv
 
     $scope.myDate = new Date();
 
-
     $scope.chooseYourDestiny = function () {
       debugger;
       var dayZero = Math.round(new Date() / 1000 / 60 / 60 / 24 / 365.25);

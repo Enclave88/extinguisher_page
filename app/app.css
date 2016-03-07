@@ -1,3 +1,40 @@
+/*typography*/
+
+html, body {
+  font-family: 'Open Sans', Roboto,  "Helvetica Neue", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
+/*page*/
+
+.page {
+  display: flex;
+  justify-content: center;
+  width: 70rem;
+}
+
+.alldate {
+  background-color: lightskyblue;
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: bold;
+}
+
+.subtitle span {
+  font-size: 3rem;
+  color: dimgrey;
+}
+
 /* app css stylesheet */
 
 .menu {

@@ -9,28 +9,31 @@
   <title>My AngularJS App</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="app.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.6/angular-material.css">
   <link rel="stylesheet" href="https://material.angularjs.org/1.0.6/docs.css">
+  <link rel="stylesheet" href="app.css">
 </head>
 <body ng-app='modalTest' ng-cloak="" ng-controller="dialogTestCtrl">
-  <h1>ТЕСТИРУЕМЫЙ ЗАГОЛОВОК С ДРУГОЙ СИСТЕМЫ, ДРУГОЙ МАШИНЫ.</h1>
-  <div class="alldate">
-    <div>
-      <p>Сейчас: {{ now | date: 'EEEE, MMMM d, y'}}</p>
-      <p>вычитаем</p>
-      <p>Дата покупки или последней проверки/зарядки огнетушителя:</p>
+  <div class="page">
+    <div class="alldate">
+      <h1>Проверка огнетушителя</h1>
+      <div>
+        <p class="subtitle">Сейчас: <span>{{ now | date: 'EEEE, MMMM d, y'}}</span></p>
+        <p class="subtitle">вычитаем</p>
+        <p class="subtitle">Дату покупки или последней проверки/зарядки огнетушителя:</p>
+      </div>
+      <div class="datepickerdemoBasicUsage">
+        <md-content></md-content>
+        <md-datepicker ng-model="myDate"></md-datepicker>
+        <button ng-click="chooseYourDestiny()">Кнопка</button>
+      </div>
     </div>
-    <div class="datepickerdemoBasicUsage">
-      <md-content></md-content>
-      <md-datepicker ng-model="myDate"></md-datepicker>
-      <button ng-click="chooseYourDestiny()">Кнопка</button>
-    </div>
-  </div>
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  </div>
 
 
   <!-- In production use:
