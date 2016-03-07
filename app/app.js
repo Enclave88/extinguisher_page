@@ -5,7 +5,7 @@ angular.module('modalTest', ['ngRoute', 'ngMaterial', 'ngMessages', 'material.sv
 
     $scope.extinguisher = {
       type: ['powder', 'carbon_dioxide'],
-      weight: true
+      weight: false
     };
 
     $interval(function () {
