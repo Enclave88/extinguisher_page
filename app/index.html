@@ -17,14 +17,27 @@
 <body ng-app='modalTest' ng-cloak="" ng-controller="dialogTestCtrl">
   <div class="page">
     <div class="alldate">
-      <h1>Когда следующая проверка</h1>
+      <div class="page-title">
+        <h1>Когда следующая проверка</h1>
+        <h2>Огнетушителя</h2>
+      </div>
       <div>
-        <p class="subtitle">Сейчас: <span>{{ now | date: 'EEEE, MMMM d, y'}}</span></p>
-        <p class="subtitle">вычитаем</p>
-        <p class="subtitle">Дату покупки или последней проверки/зарядки огнетушителя:</p>
-        <input type="checkbox" ng-model='extinguisher.weight' value='2'/> ОП-2 (Огнетушитель порошковый 2кг) <br/>
-        <input type="radio" name="type" ng-model='extinguisher.type' value="powder" ng-disabled="extinguisher.weight === true"> Порошковый
-        <input type="radio" name="type" ng-model='extinguisher.type' value="carbon_dioxide" ng-disabled="extinguisher.weight === true"> Углекислотный
+
+        <section>
+          <p class="subtitle">Сейчас: <span>{{ now | date: 'EEEE, MMMM d, y'}}</span></p>
+        </section>
+
+        <section>
+          <p class="subtitle">ТИП ОГНЕТУШИТЕЛЯ</p>
+          <input type="checkbox" ng-model='extinguisher.weight' value='2'/> ОП-2
+          <input type="radio" name="type" ng-model='extinguisher.type' value="powder" ng-disabled="extinguisher.weight === true"> Порошковый
+          <input type="radio" name="type" ng-model='extinguisher.type' value="carbon_dioxide" ng-disabled="extinguisher.weight === true"> Углекислотный
+        </section>
+
+        <section>
+          <p class="subtitle">Дата покупки или последней проверки/зарядки огнетушителя:</p>
+        </section>
+
       </div>
       <div class="datepickerdemoBasicUsage">
         <md-content></md-content>
