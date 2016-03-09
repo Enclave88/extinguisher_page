@@ -21,12 +21,14 @@ angular.module('modalTest', ['ngRoute', 'ngMaterial', 'ngMessages', 'material.sv
       var summary = (dayZero - beginCount);
       if (summary > 2) {
         alert('Пора перезаряжать!');
+      } else if (summary > 2 && this.extinguisher.type === 'carbon_dioxide') {
+        alert('Пора перезаряжать и проверить целостность раструба')
       } else if (summary >= 1 && this.extinguisher.type === 'powder') {
-          alert('Время освидетельствования');
+        alert('Время освидетельствования');
       } else if (summary >= 1 ) {
-          alert('Автомобильный');
+        alert('Автомобильный');
       } else if (summary < 1) {
-          alert('Всё в порядке');
+        alert('Всё в порядке');
       }
     }
   });
